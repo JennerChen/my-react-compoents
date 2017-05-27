@@ -1,3 +1,7 @@
-/**
- * Created by zhang on 2017/5/27.
- */
+import React from 'react';
+
+class Modal extends React.Component{
+	render(){
+		return <div> we are current in modal branch </div>
+	}
+}
