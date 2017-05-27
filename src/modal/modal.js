@@ -1,1 +1,8 @@
-console.log("This is modal")
+console.log("This is modal");
+import React from 'react';
+
+class Modal extends React.Component{
+	render(){
+		return <div> we are current in modal branch </div>
+	}
+}
