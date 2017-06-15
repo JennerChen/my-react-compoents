@@ -2,11 +2,14 @@ const path = require('path');
 const webpack = require('webpack');
 module.exports = {
 	entry: {
-		app:['babel-polyfill','./src/index.js']
+		all:['babel-polyfill','./src/index.js'],
+		modal: ['babel-polyfill','./src/modal/modal.js'],
+		fabric: ['babel-polyfill','./src/fabric/index.js'],
+		motion: ['babel-polyfill','./src/motion/index.js']
 	},
 	output: {
 		filename: '[name].js',
-		path: path.resolve(__dirname,'static/js')
+		path: path.resolve(__dirname,'dist/js')
 	},
 	watch: true,
 	devtool: "inline-source-map",
@@ -17,30 +20,19 @@ module.exports = {
 		new webpack.optimize.CommonsChunkPlugin({
 			name: ["vendor","manifest"],
 			minChunks: function (module) {
-				// this assumes your vendor imports exist in the node_modules directory, 把所有node_modules下的文件一律加入类库包
 				return module.context && module.context.indexOf('node_modules') !== -1;
 			}
 		})
 	],
+	externals: {
+		fabric: 'fabric'
+	},
 	module: {
 		rules: [
 			{
 				test: [/.jsx?$/, /.js?$/],
 				loader: 'babel-loader',
-				exclude: '/node_modules',
-				query: {
-					presets: [
-						["es2015", { "loose": true }],
-						"stage-1",
-						'react'
-					],
-					plugins: [
-						"transform-regenerator",
-						"add-module-exports",
-						"transform-es2015-modules-commonjs",
-						"transform-decorators-legacy"
-					]
-				}
+				exclude: '/node_modules'
 			}
 		]
 	}

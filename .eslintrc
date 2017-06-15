@@ -1,0 +1,23 @@
+{
+	"parserOptions": {
+		"ecmaVersion": 6,
+		"sourceType": "module",
+		"ecmaFeatures": {
+			"jsx": true
+		}
+	},
+	"globals":{},
+	"parser": "babel-eslint",
+	"plugins": [
+		"react"
+	],
+	"rules": {
+		"no-console":"error",
+		"no-invalid-regexp": 2
+	},
+	"env": {
+		"browser": true,
+		"node": true,
+		"es6": true
+	}
+}
