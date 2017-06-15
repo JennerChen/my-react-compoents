@@ -25,7 +25,7 @@ module.exports = {
 		})
 	],
 	externals: {
-		fabric: 'fabric'
+		fabric: 'fabric',
 	},
 	module: {
 		rules: [
