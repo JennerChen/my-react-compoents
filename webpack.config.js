@@ -35,13 +35,17 @@ module.exports = {
 						'react'
 					],
 					plugins: [
-						"transform-regenerator",
-						"add-module-exports",
 						"transform-es2015-modules-commonjs",
 						"transform-decorators-legacy"
 					]
 				}
 			}
 		]
+	},
+	externals: {
+		'cheerio': 'window',
+		'react/addons': 'react',
+		'react/lib/ExecutionEnvironment': 'react',
+		'react/lib/ReactContext': 'react'
 	}
 };
