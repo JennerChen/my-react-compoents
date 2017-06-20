@@ -5,7 +5,8 @@ module.exports = {
 		all:['babel-polyfill','./src/index.js'],
 		modal: ['babel-polyfill','./src/modal/modal.js'],
 		fabric: ['babel-polyfill','./src/fabric/index.js'],
-		motion: ['babel-polyfill','./src/motion/index.js']
+		motion: ['babel-polyfill','./src/motion/index.js'],
+		timepicker:['babel-polyfill','./src/timepicker/index.js']
 	},
 	output: {
 		filename: '[name].js',
