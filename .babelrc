@@ -1,5 +1,11 @@
 {
-	"presets": ["es2015", "react"],
-	"plugins": ["transform-class-properties",
-		"transform-decorators-legacy","syntax-dynamic-import"]
+	"presets": [
+		"es2015",
+		"react"
+	],
+	"plugins": [
+		"transform-class-properties",
+		"transform-decorators-legacy",
+		"transform-object-rest-spread"
+	]
 }
