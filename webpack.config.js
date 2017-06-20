@@ -26,6 +26,10 @@ module.exports = {
 	],
 	externals: {
 		fabric: 'fabric',
+		'cheerio': 'window',
+		'react/addons': 'react',
+		'react/lib/ExecutionEnvironment': 'react',
+		'react/lib/ReactContext': 'react'
 	},
 	module: {
 		rules: [
